@@ -1,6 +1,18 @@
 CREATE DATABASE UsuarioEnderecoTelefone;
 USE UsuarioEnderecoTelefone;
 
+
+CREATE TABLE Endereco (
+	idEndereco INT NOT NULL AUTO_INCREMENT,
+	logradouro VARCHAR(45) NOT NULL,
+	bairro VARCHAR(45) NOT NULL,
+	cep DECIMAL(8) NOT NULL,
+	cidade VARCHAR(45) NOT NULL,
+	estado VARCHAR(2) NOT NULL,
+	complemento VARCHAR(45) NOT NULL,
+	PRIMARY KEY(idEndereco)
+);
+
 CREATE TABLE Pessoa (
 	idPessoa INT NOT NULL AUTO_INCREMENT,
 	cpf DECIMAL(11) NOT NULL,
@@ -23,13 +35,3 @@ CREATE TABLE Telefone (
 	FOREIGN KEY(fk_idPessoa) REFERENCES Pessoa(idPessoa)
 );
 
-CREATE TABLE Endereco (
-	idEndereco INT NOT NULL AUTO_INCREMENT,
-	logradouro VARCHAR(45) NOT NULL,
-	bairro VARCHAR(45) NOT NULL,
-	cep DECIMAL(8) NOT NULL,
-	cidade VARCHAR(45) NOT NULL,
-	estado VARCHAR(2) NOT NULL,
-	complemento VARCHAR(45) NOT NULL,
-	PRIMARY KEY(idEndereco)
-);
