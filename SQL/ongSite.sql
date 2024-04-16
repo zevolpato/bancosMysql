@@ -1,5 +1,5 @@
 CREATE DATABASE OngSite;
-USE Barbearia;
+USE OngSite;
 
 CREATE TABLE Ong (
 	idOng INT NOT NULL AUTO_INCREMENT,
@@ -11,7 +11,7 @@ CREATE TABLE Ong (
 );
 
 CREATE TABLE Usuario (
-	idUsuario INT NOT NULL AUTO_ICREMENT,
+	idUsuario INT NOT NULL AUTO_INCREMENT,
 	nome VARCHAR(45) NOT NULL,
 	endereco VARCHAR(100),
 	whatsapp DECIMAL(11),
